@@ -6,5 +6,6 @@
     ./editors
     ./tools
     ./gtk.nix
+    ./environment.nix
   ];
 }
