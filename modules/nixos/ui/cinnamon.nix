@@ -1,6 +1,7 @@
 { ... }:
 {
   services.xserver.enable = true;
+
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.cinnamon.enable = true;
 
@@ -10,6 +11,10 @@
 
   services.xserver.updateDbusEnvironment = true;
 
-  security.pam.services.login.enableGnomeKeyring = true;
+  security.pam.services = {
+    login.enableGnomeKeyring = true;
+    lightdm.enableGnomeKeyring = true;
+  };
+
   services.cinnamon.apps.enable = false;
 }
