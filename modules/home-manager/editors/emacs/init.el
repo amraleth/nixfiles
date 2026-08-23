@@ -1,6 +1,6 @@
 ;; ui
-
 (setq inhibit-startup-screen t
+      inhibit-startup-message t
       initial-scratch-message nil)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -157,15 +157,20 @@
 
 ;; magit
 (use-package magit
-  :general
-  (amraleth-leader
-    "g" '(:ignore t :wk "git")
-    "gs" '(magit-status :wk "status")
-    "gb" '(magit-blame-date :wk "blame")
-    "gl" '(magit-log-current :wk "log")
-    "gd" '(magit-diff-dwim :wk "diff")
-    "gf" '(magit-file-dispatch :wk "file actions")))
+  :commands
+  (magit-status
+   magit-blame
+   magit-log-current
+   magit-diff-dwim
+   magit-file-dispatch))
 
+(amraleth-leader
+  "g"  '(:ignore t :wk "git")
+  "gs" '(magit-status :wk "status")
+  "gb" '(magit-blame :wk "blame")
+  "gl" '(magit-log-current :wk "log")
+  "gd" '(magit-diff-dwim :wk "diff")
+  "gf" '(magit-file-dispatch :wk "file actions"))
 ;; diff
 (use-package diff-hl
   :demand t
