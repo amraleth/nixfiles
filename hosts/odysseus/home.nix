@@ -1,11 +1,16 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   home.username = "amraleth";
   home.homeDirectory = "/home/amraleth";
   home.stateVersion = "26.05";
 
-  home.packages = [ ];
+  home.packages = with pkgs; [
+    darktable
+    discord
+    spotify
+    libreoffice
+  ];
 
   home.file = { };
 

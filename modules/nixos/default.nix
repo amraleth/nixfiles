@@ -8,5 +8,6 @@
     ./environment.nix
     ./bluetooth.nix
     ./ui
+    ./services.nix
   ];
 }
