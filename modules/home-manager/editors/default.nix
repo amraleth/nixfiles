@@ -6,5 +6,6 @@
     ./editors.nix
     ./pycharm.nix
     ./jupyter.nix
+    ./ai.nix
   ];
 }
