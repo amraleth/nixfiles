@@ -7,5 +7,6 @@
     ./pkg
     ./editors
     ./tools
+    ./gaming.nix
   ];
 }
